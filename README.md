@@ -1,4 +1,4 @@
-Reinforcement Learning – ViZDoom Basic
+Reinforcement Learning – ViZDoom Environment
 
 A simple Deep Q-Network (DQN) agent trained on the ViZDoom Basic scenario using:
 
