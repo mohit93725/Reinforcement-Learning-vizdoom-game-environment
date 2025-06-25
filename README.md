@@ -1,39 +1,35 @@
-# Reinforcement-Learning-vizdoom-game-environment
+Reinforcement Learning – ViZDoom Basic
 
-Reinforcement Learning in ViZDoom
+A simple Deep Q-Network (DQN) agent trained on the ViZDoom Basic scenario using:
 
-A simple Deep Q-Learning agent trained to play the ViZDoom Basic scenario using:
+    ✅ Frame stacking (4 grayscale frames)
 
-    Frame stacking (4 grayscale frames)
+    ✅ Dueling DQN architecture
 
-    Dueling DQN architecture
+    ✅ Experience Replay
 
-    Experience Replay
+    ✅ Double DQN updates
 
-    Double DQN target updates
-
-📦 Requirements
+📦 Installation
 
 pip install torch vizdoom opencv-python numpy
 
+Ensure basic.cfg is present in your vizdoom/scenarios directory.
 ▶️ Run Training
 
-from train import train
-train()
 
-Ensure the basic.cfg scenario is available in your vizdoom.scenarios_path.
-🧠 Key Components
+🧩 Components
 
-    ReplayBuffer: handles 4-frame stacking and sampling
+    ReplayBuffer — manages 4-frame history and sampling
 
-    CNNDQN: convolutional dueling architecture
+    CNNDQN — convolutional dueling DQN model
 
-    train(): main loop with epsilon-greedy policy and target net sync
+    train() — main loop with ε-greedy policy and periodic target network sync
 
 🖼️ Input Format
 
-    Grayscale frames
+    Preprocessed grayscale frames
 
-    Resized to (84, 84)
+    Resized to 84 × 84
 
-    Stacked as shape (4, 84, 84)
+    Stacked as a tensor of shape (4, 84, 84)
